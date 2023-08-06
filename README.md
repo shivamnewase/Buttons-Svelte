@@ -1,6 +1,23 @@
-# buttons-svelte
+![Buttons-Svelte](/static/buttons-svelte.png)
+
+<!-- ![Buttons-Svelte](./static/button-svelte01-48.svg) -->
+
+
+# Buttons-Svelte
 
 Buttons-Svelte is a library for Svelte, providing reusable button components.
+
+## Introduction
+
+Buttons-Svelte is a powerful and flexible library for creating beautiful and interactive buttons in Svelte applications. It offers a wide range of customization options, allowing you to create buttons with various colors, sizes, padding, and margins.
+
+## Features
+
+- Easy-to-use button components for Svelte applications.
+- Customize button color, text color, padding, and margins.
+- Choose from a variety of predefined button colors or use custom colors.
+- Adjust the font size and font family to match your design.
+- Lightweight and optimized for performance.
 
 ## Installation
 
@@ -10,12 +27,10 @@ You can install the `buttons-svelte` library using npm:
 npm install buttons-svelte
 ```
 
+
 ## Usage
-
 To use the button components in your Svelte project, import them from the library:
-### customClass
- 
- - custom class use for apply button color
+
 
 ```bash
 <script>
@@ -23,149 +38,41 @@ To use the button components in your Svelte project, import them from the librar
 </script>
 
 <Button>Click Me</Button>
-<Button customClass="btn-red-50">Button</Button>
-<Button customClass="btn-red-100">Button</Button>
-<Button customClass="btn-red-200">Button</Button>
-<Button customClass="btn-red-300">Button</Button>
-<Button customClass="btn-red-400">Button</Button>
-<Button customClass="btn-red-500">Button</Button>
-<Button customClass="btn-red-600">Button</Button>
-<Button customClass="btn-red-700">Button</Button>
-<Button customClass="btn-red-800">Button</Button>
-<Button customClass="btn-red-900">Button</Button>
-
-
-```
-### Size
-```bash
-<script>
-  import { Button } from "buttons-svelte";
-</script>
-
-<Button textSize="text-2">Button</Button>
-<Button textSize="text-4">Button</Button>
-<Button textSize="text-6">Button</Button>
-<Button textSize="text-8">Button</Button>
-<Button textSize="text-10">Button</Button>
-<Button textSize="text-12">Button</Button>
- .....
-<Button textSize="text-36">Button</Button>
-
-```
-#### or
-```bash
-<script>
-  import { Button } from "buttons-svelte";
-</script>
-
-<Button textSize="200px">Button</Button>
+<Button btnColor="btn-red-500">Button</Button>
+<Button btnColor="btn-green-600">Button</Button>
+<Button btnColor="btn-blue-500">Button</Button>
+<Button btnColor="#ff00ff">Button</Button>
 ```
 
-### Padding
-```bash
-<script>
-  import { Button } from "buttons-svelte";
-</script>
-
-<Button padding="p-2">Button</Button>
-<Button padding="p-4">Button</Button>
-<Button padding="p-6">Button</Button>
-<Button padding="p-8">Button</Button>
- .....
-<Button padding="p-56">Button</Button>
-
-```
-#### or
-```bash
-<script>
-  import { Button } from "buttons-svelte";
-</script>
-
-<Button padding="20px 10px">Button</Button>
-```
-
-#### or
-```bash
-<script>
-  import { Button } from "buttons-svelte";
-</script>
-
-<Button padding="10px 20px 30px 40px">Button</Button>
-```
-
-### Margin
-```bash
-<script>
-  import { Button } from "buttons-svelte";
-</script>
-
-<Button margin="m-2">Button</Button>
-<Button margin="m-4">Button</Button>
-<Button margin="m-6">Button</Button>
-<Button margin="m-8">Button</Button>
- .....
-<Button padding="m-56">Button</Button>
-```
-### or
-```bash
-<script>
-  import { Button } from "buttons-svelte";
-</script>
-
-<Button margin="20px">Button</Button>
-```
-### or
-```bash
-<script>
-  import { Button } from "buttons-svelte";
-</script>
-
-<Button margin="20px 10px">Button</Button>
-```
-### or
-
-```bash
-<script>
-  import { Button } from "buttons-svelte";
-</script>
-<Button margin="20px 10px 20px 10px">Button</Button>
-```
-### TextColor
-```bash
-<script>
-  import { Button } from "buttons-svelte";
-</script>
-
-<Button textColor="yellow">Button</Button>
-```
-### or
-```bash
-<script>
-  import { Button } from "buttons-svelte";
-</script>
-
-<Button textColor="#ffff00">Button</Button>
-```
 ## Available Props
+##### The Button component accepts the following props:
 
-The `Button` component accepts the following props:
 
--   `customClass` (string, default: ""): The custom CSS class to apply to the button for additional styling.
--   `onclick` (function, default: null): The event handler function to be called when the button is clicked.
-
+| Props    | Type    |  Default Type | Description |
+| -------- | ------- | ------------- | ----------- |
+| btnColor |  string |       " "     | Custom CSS property to apply buttoncolor. |
+| onclick  | function|      null     | Event handler function for button click. |
+| onMouseOver| function|      null     | Event handler function for mouse pointer is over the button |
+| onMouseOut| function|      null     | Event handler function for mouse pointer leaves the button |
+| textColor| string  |       " "     | Custom CSS property for text color. |
+|  textSize | string |       " "     | Custom CSS property for text size. |
+| padding   | string |       " "     | Custom CSS property for padding. |         
+| margin   |  string |       " "     | Custom CSS property for margin. |
+| border   |  string |        " "    | Custom CSS property for border. |
+| borderRounded| string |     " "    | Custom CSS property for rounded border.|
+	
 ## Examples
-### Basic Usage
+##### Basic Usage 
+  
 ```bash
 <script>
   import { Button } from "buttons-svelte";
 </script>
 
 <Button>Click Me</Button>
-```
+```	
 
-
-### Handling Click Events
-
+## Handling Click Events
 ```bash
 <script>
   import { Button } from "buttons-svelte";
@@ -176,28 +83,36 @@ The `Button` component accepts the following props:
 </script>
 
 <Button onclick={handleClick}>Click Me</Button>
-
 ```
-## Example
+
+## Customizing Buttons
 ```bash
 <script>
   import { Button } from "buttons-svelte";
-
-  const handleClick = () => {
-    console.log("Button clicked!");
-  };
 </script>
 
-<Button onclick={handleClick} customClass="btn-red-500" padding="p-6" textColor="green" textSize="text-2">Click Me</Button>
+<Button btnColor="btn-red-500" padding="p-6" textColor="green" textSize="text-2">Click Me</Button>
+<Button btnColor="btn-blue-500" padding="p-8" textColor="white" textSize="text-4">Submit</Button>
+<Button btnColor="#ff00ff" padding="p-10" textColor="black"textSize="text-6">Cancel</Button>
+
 ```
+
+## CSS Units
+
+`  px ` `  rem ` `  em ` ` % ` 
+Use any for styling purpose
 
 ## Contributing
 
-Contributions to the `buttons-svelte` library are welcome! If you find a bug, have a feature request, or want to contribute code, please open an issue or submit a pull request on the [GitHub repository](https://github.com/shivamnewase/Buttons-Svelte).
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](https://chat.openai.com/c/LICENSE) file for details.
+Contributions
+Yes please! See the contributing guidelines for details.
+[contributing guidelines](https://github.com/shivamnewase/Buttons-Svelte).
 
 
-This `README.md` file includes the introduction, installation instructions, usage guidelines, available props for the `Button` component, usage examples, contribution guidelines, and licensing information for the "buttons-svelte" library, all written in Markdown format. You can copy and paste this content into your actual `README.md` file for your library and customize it as needed.
+
+### License
+
+By contributing to the buttons-svelte library, you agree that your contributions will be licensed under the [MIT License]
+
+Thank you for contributing to buttons-svelte! Your help is greatly appreciated!
+

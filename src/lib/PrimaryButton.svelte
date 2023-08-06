@@ -4,16 +4,27 @@
     export let textSize = "md"; // Add the size prop with a default value
     export let textColor = "black";
     export let onclick = null;
+    export let onMouseOver = null;
+    export let onMouseOut = null;
     export let padding = "md"; // Add the padding prop with a default value
     export let margin = "md";
     export let border = "2px"; // Add the border prop with a default value
     export let borderRounded = "2px";
+    export let fontFamily = "inherit";
+    export let fontWeight = "normal";
 
+    
     const getMarginValues = (margin) => {
 
-if (margin.endsWith('px')) {
+      if (margin.endsWith('px')) {
       return margin;
-  }
+    } else if (margin.endsWith('em')) {
+      return margin;
+    } else if (margin.endsWith('rem')) {
+      return margin;
+    } else if (margin.endsWith('%')) {
+      return margin;
+    }
 const marginSizes = {
   "m-0": "2px 4px",
   "m-2": "4px 8px",
@@ -43,8 +54,14 @@ return marginSizes[margin] || marginSizes.md;
     const getPaddingValues = (padding) => {
 
       if (padding.endsWith('px')) {
-            return padding;
-        }
+      return padding;
+    } else if (padding.endsWith('em')) {
+      return padding;
+    } else if (padding.endsWith('rem')) {
+      return padding;
+    }else if (padding.endsWith('%')) {
+      return padding;
+    }
     const paddingSizes = {
         "p-0": "2px 4px",
         "p-2": "4px 8px",
@@ -72,10 +89,15 @@ return marginSizes[margin] || marginSizes.md;
   };
 
   const getTextSize = (textSize) => {
-
     if (textSize.endsWith('px')) {
-            return textSize;
-        }
+      return textSize;
+    } else if (textSize.endsWith('em')) {
+      return textSize;
+    } else if (textSize.endsWith('rem')) {
+      return textSize;
+    }else if (textSize.endsWith('%')) {
+      return textSize;
+    }
     const textSizes = {
         "text-0" :"2px",
         "text-2" :"4px",
@@ -124,6 +146,7 @@ return marginSizes[margin] || marginSizes.md;
 
 </script>
 
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <button
   class={getClassNames()}
   style={`
@@ -131,11 +154,15 @@ return marginSizes[margin] || marginSizes.md;
     color: ${textColor} !important;
     padding: ${getPaddingValues(padding)};
     margin: ${getMarginValues(margin)};
+    font-family: ${fontFamily};
+    font-weight: ${fontWeight};
     font-size: ${getTextSize(textSize)};
     border: ${border};
     border-radius: ${borderRounded};
   `}
   on:click={onclick}
+  on:mouseover={onMouseOver} 
+  on:mouseout={onMouseOut}   
 >
   <slot></slot>
 </button>
@@ -147,6 +174,7 @@ return marginSizes[margin] || marginSizes.md;
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        font-family: fontFamily;
     }
 
     .btn-red-50{
