@@ -51,7 +51,7 @@ To use the button components in your Svelte project, import them from the librar
 | Props    | Type    |  Default Type | Description |
 | -------- | ------- | ------------- | ----------- |
 | btnColor |  string |       " "     | Custom CSS property to apply buttoncolor. |
-| onclick  | function|      null     | Event handler function for button click. |
+| onClick  | function|      null     | Event handler function for button click. |
 | onMouseOver| function|      null     | Event handler function for mouse pointer is over the button |
 | onMouseOut| function|      null     | Event handler function for mouse pointer leaves the button |
 | textColor| string  |       " "     | Custom CSS property for text color. |
