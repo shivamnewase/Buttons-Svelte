@@ -12,8 +12,8 @@
 	export let borderRounded = '2px';
 	export let fontFamily = 'inherit';
 	export let fontWeight = 'normal';
-	export let className = '';
 	export let disabled = false;
+	export let outline = false;
 	
    
 
@@ -179,6 +179,29 @@
 </button>
 
 <style>
+
+.button.outline {
+		background-color: transparent;
+		color: {btnColor === 'outline-btn-red-500' ? '#ff0000' : '#000000'};
+		border: 2px solid {btnColor === 'outline-btn-red-500' ? '#ff0000' : 'transparent'};
+		transition: border-color 0.3s;
+	}
+
+	.button.outline:hover {
+		border-color: {btnColor === 'outline-btn-red-500' ? 'transparent' : '#ff0000'};
+		color: {btnColor === 'outline-btn-red-500' ? '#ff0000' : '{textColor}'};
+		background-color: transparent;
+	}
+
+	.button.outline-btn-blue-500 {
+		color: #0000ff;
+		border-color: #0000ff;
+	}
+
+	.button.outline-btn-green-500 {
+		color: #00ff00;
+		border-color: #00ff00;
+	}
 
    .button:disabled {
      opacity: 0.6; 

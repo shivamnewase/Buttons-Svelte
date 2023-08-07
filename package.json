@@ -1,6 +1,6 @@
 {
 	"name": "buttons-svelte",
-	"version": "0.4.4",
+	"version": "0.5.0",
 	"description": "Buttons-Svelte is a library for Svelte, providing a collection of reusable button components. These components are designed to be highly customizable, allowing developers to easily create visually appealing buttons for their Svelte applications.",
 	"license": "MIT",
 	"scripts": {
@@ -55,10 +55,14 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"repository": {
-    "type": "git",
-    "url": "https://github.com/shivamnewase/Buttons-Svelte"
-  },
-  "keywords": ["svelte", "svelteKit", "buttons", "components"],
-  "author": "Shivam Newase"
-
+		"type": "git",
+		"url": "https://github.com/shivamnewase/Buttons-Svelte"
+	},
+	"keywords": [
+		"svelte",
+		"svelteKit",
+		"buttons",
+		"components"
+	],
+	"author": "Shivam Newase"
 }
