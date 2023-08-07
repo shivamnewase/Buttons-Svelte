@@ -14,6 +14,8 @@
 	export let fontWeight = 'normal';
 	export let className = '';
 	export let disabled = false;
+	const isRGBColor = (str) => /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/.test(str);
+
 	const getMarginValues = (margin) => {
 		if (margin.endsWith('px')) {
 			return margin;
@@ -137,7 +139,10 @@
 			return `button ${btnColor}`.trim();
 		} else if (btnColor.startsWith('#')) {
 			return `button custom-color`;
-		} else {
+		} else if (isRGBColor(btnColor)) {
+			return `button custom-color`;
+		}
+		else {
 			return `button`;
 		}
 	};
