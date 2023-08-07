@@ -523,14 +523,4 @@
 	.xxl {
 		font-size: 17px;
 	}
-
-
-  @font-face {
-    font-family: 'CustomFont'; /* Choose a suitable font name */
-    src: url('/fonts/your-custom-font.woff2') format('woff2'),
-         url('/fonts/your-custom-font.woff') format('woff');
-    /* Add more src declarations for different font formats if needed */
-    font-weight: 400; /* You can specify the font weight if needed */
-    font-style: normal; /* Specify "italic" if the font has an italic style */
-  }
 </style>
