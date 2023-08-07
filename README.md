@@ -130,6 +130,12 @@ To use the button components in your Svelte project, import them from the librar
 `  px ` `  rem ` `  em ` ` % ` 
 Use any for styling purpose
 
+
+
+## Attribute
+
+` class ` ` id ` 
+
 ## Contributing
 
 Contributions
