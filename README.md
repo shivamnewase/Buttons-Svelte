@@ -62,6 +62,8 @@ To use the button components in your Svelte project, import them from the librar
 | borderRounded| string |   " "         | Custom CSS property for rounded border.|
 | fontFamily |  string  |    " "        | Custom CSS property for font family.|
 | fontWeight |  string  |    " "        | Custom CSS property for font weight.|
+| transDuration |  string  |    " "     | Custom CSS property for transition duration.|
+| transTimingFunction |  string  |    " "        | Custom CSS property for transition timing function.|
 
 ## Examples
 ##### Basic Usage 
