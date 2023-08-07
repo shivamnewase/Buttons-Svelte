@@ -58,7 +58,7 @@
     "type": "git",
     "url": "https://github.com/shivamnewase/Buttons-Svelte"
   },
-  "keywords": ["svelte", "svelteKit", "buttons", "components"],
+  "keywords": ["svelte", "svelteKit", "buttons", "components","events"],
   "author": "Shivam Newase"
 
 }
