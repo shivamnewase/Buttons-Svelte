@@ -160,7 +160,7 @@
 	on:mouseover={onMouseOver}
 	on:mouseout={onMouseOut}
 >
-	<slot />
+	<slot class="" id="" />
 </button>
 
 <style>
