@@ -12,10 +12,8 @@
 	export let borderRounded = '2px';
 	export let fontFamily = 'inherit';
 	export let fontWeight = 'normal';
-	// export let transDuration = '0.3s'; // Default duration
-	// export let transTimingFunction = 'ease';
-	export let className  = '';
-
+	export let className = '';
+	export let disabled = false;
 	const getMarginValues = (margin) => {
 		if (margin.endsWith('px')) {
 			return margin;
@@ -147,7 +145,7 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <button
-    class={`${getClassNames()} ${className}`} 
+    class={`${getClassNames()}`}
 	style={`
     ${btnColor.startsWith('#') ? `background-color: ${btnColor};` : ''}
     color: ${textColor} !important;
@@ -163,6 +161,7 @@
 	on:click={onClick}
 	on:mouseover={onMouseOver}
 	on:mouseout={onMouseOut}
+	disabled ={disabled}
 >
 <div class="slot-content" id="slot-id">
 	<slot />
@@ -171,6 +170,11 @@
 </button>
 
 <style>
+
+   .button:disabled {
+     opacity: 0.6; 
+     cursor: not-allowed; 
+    }
 	.button {
 		color: #ffffff;
 		padding: 10px 20px;
