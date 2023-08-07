@@ -14,6 +14,7 @@
 	export let fontWeight = 'normal';
 	// export let transDuration = '0.3s'; // Default duration
 	// export let transTimingFunction = 'ease';
+	export let className  = '';
 
 	const getMarginValues = (margin) => {
 		if (margin.endsWith('px')) {
@@ -146,7 +147,7 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <button
-	class={getClassNames()}
+    class={`${getClassNames()} ${className}`} 
 	style={`
     ${btnColor.startsWith('#') ? `background-color: ${btnColor};` : ''}
     color: ${textColor} !important;
