@@ -15,7 +15,7 @@
 	export let className = '';
 	export let disabled = false;
 	const isRGBColor = (str) => /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/.test(str);
-
+	const isHexColor = (str) => /^#[0-9A-Fa-f]{6}$/.test(str);
 	const getMarginValues = (margin) => {
 		if (margin.endsWith('px')) {
 			return margin;
@@ -137,11 +137,9 @@
 	const getClassNames = () => {
 		if (btnColor.startsWith('btn-')) {
 			return `button ${btnColor}`.trim();
-		} else if (btnColor.startsWith('#')) {
+		} else if (isRGBColor(btnColor) || isHexColor(btnColor)) {
 			return `button custom-color`;
-		} else if (isRGBColor(btnColor)) {
-			return `button custom-color`;
-		}
+		} 
 		else {
 			return `button`;
 		}
@@ -152,7 +150,7 @@
 <button
     class={`${getClassNames()}`}
 	style={`
-    ${btnColor.startsWith('#') ? `background-color: ${btnColor};` : ''}
+    ${isRGBColor(btnColor) || isHexColor(btnColor) ? `background-color: ${btnColor};` : ''}
     color: ${textColor} !important;
     padding: ${getPaddingValues(padding)};
     margin: ${getMarginValues(margin)};
