@@ -125,7 +125,6 @@ To use the button components in your Svelte project, import them from the librar
 
 
 ## CSS Units
-
 `  px ` `  rem ` `  em ` ` % ` 
 Use any for styling purpose
 

@@ -14,8 +14,12 @@
 	export let fontWeight = 'normal';
 	export let className = '';
 	export let disabled = false;
+	
+   
+
 	const isRGBColor = (str) => /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/.test(str);
 	const isHexColor = (str) => /^#[0-9A-Fa-f]{6}$/.test(str);
+	
 	const getMarginValues = (margin) => {
 		if (margin.endsWith('px')) {
 			return margin;
@@ -140,9 +144,10 @@
 		} else if (isRGBColor(btnColor) || isHexColor(btnColor)) {
 			return `button custom-color`;
 		} 
-		else {
-			return `button`;
+		else{
+			return 'button';
 		}
+		
 	};
 </script>
 
@@ -165,6 +170,7 @@
 	on:mouseover={onMouseOver}
 	on:mouseout={onMouseOut}
 	disabled ={disabled}
+	
 >
 <div class="slot-content" id="slot-id">
 	<slot />
@@ -178,6 +184,7 @@
      opacity: 0.6; 
      cursor: not-allowed; 
     }
+
 	.button {
 		color: #ffffff;
 		padding: 10px 20px;
@@ -185,7 +192,16 @@
 		border-radius: 4px;
 		cursor: pointer;
 		font-family: fontFamily;
+		background-color: transparent; 
 	}
+	.button.outline {
+        background-color: transparent;
+        color: #000000; /* Change the text color for outline buttons */
+      }
+	  /* .button.outline:hover {
+        background-color: {btnColor};
+        color: {textColor}; 
+      } */
 
 	.btn-red-50 {
 		background-color: #ffd9d9;
