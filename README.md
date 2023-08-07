@@ -1,4 +1,4 @@
-![Buttons-Svelte](/static/buttons-svelte.png)
+![Buttons-Svelte](/static/buttons-svelte-logo.png)
 
 <!-- ![Buttons-Svelte](./static/button-svelte01-48.svg) -->
 
@@ -48,19 +48,21 @@ To use the button components in your Svelte project, import them from the librar
 ##### The Button component accepts the following props:
 
 
-| Props    | Type    |  Default Type | Description |
-| -------- | ------- | ------------- | ----------- |
-| btnColor |  string |       " "     | Custom CSS property to apply buttoncolor. |
-| onClick  | function|      null     | Event handler function for button click. |
-| onMouseOver| function|      null     | Event handler function for mouse pointer is over the button |
-| onMouseOut| function|      null     | Event handler function for mouse pointer leaves the button |
-| textColor| string  |       " "     | Custom CSS property for text color. |
-|  textSize | string |       " "     | Custom CSS property for text size. |
-| padding   | string |       " "     | Custom CSS property for padding. |         
-| margin   |  string |       " "     | Custom CSS property for margin. |
-| border   |  string |        " "    | Custom CSS property for border. |
-| borderRounded| string |     " "    | Custom CSS property for rounded border.|
-	
+| Props    | Type       |  Default Type | Description                                |
+| -------- | -------    | ------------- | --------------|
+| btnColor |  string    |       " "     | Custom CSS property to apply buttoncolor. |
+| onClick  | function   |      null     | Event handler function for button click. |
+| onMouseOver| function |    null       | Event handler function for mouse pointer is over the button. |
+| onMouseOut| function  |     null      | Event handler function for mouse pointer leaves the button. |
+| textColor| string     |      " "      | Custom CSS property for text color. |
+| textSize | string     |       " "     | Custom CSS property for text size. |
+| padding   | string    |      " "      | Custom CSS property for padding. |         
+| margin   |  string    |      " "      | Custom CSS property for margin. |
+| border   |  string    |   " "         | Custom CSS property for border. |
+| borderRounded| string |   " "         | Custom CSS property for rounded border.|
+| fontFamily |  string  |    " "        | Custom CSS property for font family.|
+| fontWeight |  string  |    " "        | Custom CSS property for font weight.|
+
 ## Examples
 ##### Basic Usage 
   
@@ -96,6 +98,32 @@ To use the button components in your Svelte project, import them from the librar
 <Button btnColor="#ff00ff" padding="p-10" textColor="black"textSize="text-6">Cancel</Button>
 
 ```
+
+## Margin
+```bash
+<script>
+  import { Button } from "buttons-svelte";
+</script>
+
+<Button margin="5px">Click Me</Button>
+<Button margin="10px 20px">Click Me</Button>
+<Button margin="10px 40px 10px 40px">Click Me</Button>
+<Button margin="m-2">Click Me</Button>
+```
+
+## Padding
+
+```bash
+<script>
+  import { Button } from "buttons-svelte";
+</script>
+
+<Button padding="10px">Click Me</Button>
+<Button padding="10px 20px">Click Me</Button>
+<Button padding="10px 40px 10px 40px">Click Me</Button>
+<Button padding="p-2">Click Me</Button>
+```
+
 
 ## CSS Units
 
