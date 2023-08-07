@@ -12,8 +12,8 @@
 	export let borderRounded = '2px';
 	export let fontFamily = 'inherit';
 	export let fontWeight = 'normal';
-	export let transDuration = '0.3s'; // Default duration
-	export let transTimingFunction = 'ease';
+	// export let transDuration = '0.3s'; // Default duration
+	// export let transTimingFunction = 'ease';
 
 	const getMarginValues = (margin) => {
 		if (margin.endsWith('px')) {
@@ -157,15 +157,16 @@
     font-size: ${getTextSize(textSize)};
     border: ${border};
     border-radius: ${borderRounded};
-	transition: background-color ${transDuration} ${transTimingFunction},
-								border ${transDuration} ${transTimingFunction},
-								border-radius ${transDuration} ${transTimingFunction};
+	
   `}
 	on:click={onClick}
 	on:mouseover={onMouseOver}
 	on:mouseout={onMouseOut}
 >
-	<slot class="" id="" />
+<div class="slot-content" id="slot-id">
+	<slot />
+</div>
+
 </button>
 
 <style>
