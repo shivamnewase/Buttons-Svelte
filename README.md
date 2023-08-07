@@ -126,6 +126,17 @@ To use the button components in your Svelte project, import them from the librar
 <Button padding="p-2">Click Me</Button>
 ```
 
+## Transition
+
+```bash
+<script>
+  import { Button } from "buttons-svelte";
+</script>
+
+<Button transDuration="0.3s" transTimingFunction="ease">Click Me</Button>
+
+```
+
 
 ## CSS Units
 
