@@ -1,6 +1,6 @@
 {
 	"name": "buttons-svelte",
-	"version": "0.9.2",
+	"version": "0.9.3",
 	"description": "Buttons-Svelte is a library for Svelte, providing a collection of reusable button components. These components are designed to be highly customizable, allowing developers to easily create visually appealing buttons for their Svelte applications.",
 	"license": "MIT",
 	"scripts": {
