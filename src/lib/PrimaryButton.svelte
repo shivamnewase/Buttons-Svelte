@@ -3,9 +3,9 @@
 	export let btnColor = 'black';
 	export let textSize = 'md'; // Add the size prop with a default value
 	export let textColor = 'black';
-	export let onClick = null;
-	export let onMouseOver = null;
-	export let onMouseOut = null;
+	export let onClick: () => void = null;
+	export let onMouseOver: () => void = null;
+	export let onMouseOut: () => void = null;
 	export let padding = 'md'; // Add the padding prop with a default value
 	export let margin = 'md';
 	export let border = '2px'; // Add the border prop with a default value
