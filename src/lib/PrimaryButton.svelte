@@ -1,19 +1,20 @@
 <!-- src/lib/Button.svelte -->
 <script lang="ts">
-	export let btnColor = 'black';
-	export let textSize = 'md'; // Add the size prop with a default value
-	export let textColor = 'black';
+	export let btnColor: string = 'black';
+	export let textSize: string = 'md';
+	export let textColor: string = 'black';
 	export let onClick: () => void = null;
 	export let onMouseOver: () => void = null;
 	export let onMouseOut: () => void = null;
-	export let padding = 'md'; // Add the padding prop with a default value
-	export let margin = 'md';
-	export let border = '2px'; // Add the border prop with a default value
-	export let borderRounded = '2px';
-	export let fontFamily = 'inherit';
-	export let fontWeight = 'normal';
-	export let disabled = false;
-	export let outline = false;
+	export let padding: string = 'md';
+	export let margin: string = 'md';
+	export let border: string = '2px';
+	export let borderRounded: string = '2px';
+	export let fontFamily: string = 'inherit';
+	export let fontWeight: string = 'normal';
+	export let disabled: boolean = false;
+	export let outline: boolean = false;
+
 	
 	const isRGBColor = (str) => /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/.test(str);
 	const isHexColor = (str) => /^#[0-9A-Fa-f]{6}$/.test(str);
