@@ -16,10 +16,10 @@
 	export let outline: boolean = false;
 
 	
-	const isRGBColor = (str) => /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/.test(str);
-	const isHexColor = (str) => /^#[0-9A-Fa-f]{6}$/.test(str);
+	const isRGBColor = (str: string) => /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/.test(str);
+	const isHexColor = (str: string) => /^#[0-9A-Fa-f]{6}$/.test(str);
 	
-	const getMarginValues = (margin) => {
+	const getMarginValues = (margin: string) => {
 		if (margin.endsWith('px')) {
 			return margin;
 		} else if (margin.endsWith('em')) {
@@ -55,7 +55,7 @@
 		return marginSizes[margin] || marginSizes.md;
 	};
 
-	const getPaddingValues = (padding) => {
+	const getPaddingValues = (padding: string) => {
 		if (padding.endsWith('px')) {
 			return padding;
 		} else if (padding.endsWith('em')) {
@@ -91,7 +91,7 @@
 		return paddingSizes[padding] || paddingSizes.md;
 	};
 
-	const getTextSize = (textSize) => {
+	const getTextSize = (textSize: string) => {
 		if (textSize.endsWith('px')) {
 			return textSize;
 		} else if (textSize.endsWith('em')) {
