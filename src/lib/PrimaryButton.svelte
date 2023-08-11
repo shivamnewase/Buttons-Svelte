@@ -1,5 +1,5 @@
 <!-- src/lib/Button.svelte -->
-<script>
+<script lang="ts">
 	export let btnColor = 'black';
 	export let textSize = 'md'; // Add the size prop with a default value
 	export let textColor = 'black';
@@ -13,6 +13,7 @@
 	export let fontFamily = 'inherit';
 	export let fontWeight = 'normal';
 	export let disabled = false;
+	export let outline = false;
 	
 	const isRGBColor = (str) => /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/.test(str);
 	const isHexColor = (str) => /^#[0-9A-Fa-f]{6}$/.test(str);
@@ -161,7 +162,7 @@
     font-size: ${getTextSize(textSize)};
     border: ${border};
     border-radius: ${borderRounded};
-	
+	disabled: ${disabled}
   `}
 	on:click={onClick}
 	on:mouseover={onMouseOver}
@@ -181,6 +182,10 @@
      opacity: 0.6; 
      cursor: not-allowed; 
     }
+	.button:disabled {
+     opacity: 0.6; 
+     cursor: not-allowed; 
+    }
 
 	.button {
 		color: #ffffff;
@@ -191,15 +196,12 @@
 		font-family: fontFamily;
 		background-color: transparent; 
 	}
-	.button.outline {
-        background-color: transparent;
-        color: #000000; /* Change the text color for outline buttons */
-      }
-	  /* .button.outline:hover {
-        background-color: {btnColor};
-        color: {textColor}; 
-      } */
 
+	  /* .button.outline {
+			background-color: transparent;
+			border: 1px solid var(--btnColor); 
+			color: var(--btnColor); 
+			} */
 	.btn-red-50 {
 		background-color: #ffd9d9;
 	}
